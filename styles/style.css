@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&family=Montserrat&family=Roboto:wght@300&display=swap");
+.header__blocks, .header__blocks--left, .header__blocks--center, .header__blocks--right, .section-content--btns, .section-content--single-btn, .footer__elements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-content--btns button:nth-child(1), .section-content--btns button:nth-child(2), .section-content--single-btn button {
+  text-align: center;
+  width: 250px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+.header {
+  position: fixed;
+  left: 50px;
+  right: 30px;
+  font-size: 16px;
+}
+.header__blocks--left {
+  cursor: pointer;
+}
+.header__blocks--center {
+  list-style: none;
+  width: 600px;
+  padding-left: 200px;
+}
+.header__blocks--right {
+  list-style: none;
+  width: 200px;
+}
+.header__blocks--right li, .header__blocks--center li {
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: .2s ease-in;
+  border-radius: 10px;
+}
+.header__blocks--right li:hover, .header__blocks--center li:hover {
+  background-color: rgba(0, 0, 0, 0.219);
+}
+.header__blocks--right li:hover, .header__blocks--center li:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.219);
+  border-radius: 10px;
+}
+
+.section {
+  height: 100vh;
+}
+
+.section-1 {
+  background: url("../images/Model3.jpg") 0 -100px/100% no-repeat;
+}
+
+.section-2 {
+  background: url("../images/ModelY.jpg") 0 -300px/100% auto no-repeat;
+}
+
+.section-3 {
+  background: url("../images/ModelS.jpg") 0 -300px/100% auto no-repeat;
+}
+
+.section-4 {
+  background: url("../images/ModelX.jpg") 0 -150px/100% auto no-repeat;
+}
+
+.section-5 {
+  background: url("../images/House.jpg") 0 0/100% auto no-repeat;
+}
+
+.section-6 {
+  background: url("../images/Garage.jpg") 0 0/100% 100% no-repeat;
+}
+
+.section-7 {
+  background: url("../images//Accessories.jpg") 0 -270px/100% auto no-repeat;
+}
+
+.scroll-btn {
+  font-size: 40px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transform: rotate(90deg);
+  bottom: 0;
+}
+.scroll-btn a {
+  display: inline;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  color: black;
+}
+.scroll-btn a:hover {
+  color: rgba(0, 0, 0, 0.63);
+}
+
+.section-content {
+  position: fixed;
+  left: 32vw;
+  right: 32vw;
+  top: 16vh;
+  bottom: 16vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section-content--text {
+  text-align: center;
+}
+.section-content--text__title {
+  font-size: 40px;
+  font-weight: bold;
+}
+.section-content--text__subtitle {
+  font-size: 16px;
+}
+.section-content--text__subtitle span {
+  cursor: pointer;
+  border-bottom: 1px solid black;
+  transition: .3s ease-in-out;
+}
+.section-content--text__subtitle span:hover {
+  border-bottom: 2px solid black;
+}
+.section-content--btns {
+  width: 100%;
+}
+.section-content--btns button:nth-child(1) {
+  background-color: #3b3b3b;
+  color: white;
+}
+.section-content--btns button:nth-child(2) {
+  color: black;
+}
+.section-content--single-btn button {
+  background-color: #181818;
+  color: white;
+}
+
+.footer {
+  position: fixed;
+  bottom: 20px;
+  width: 40vw;
+  left: calc(50% - 20vw);
+  font-size: 13px;
+  display: none;
+}
+.footer__elements {
+  padding: 0;
+  list-style: none;
+}

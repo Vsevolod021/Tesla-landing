@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&family=Montserrat&family=Roboto:wght@300&display=swap');
+
+$list-none: none;
+
+%flex-centering {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+%btns-style {
+    text-align: center;
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    
+}
+
+.header {
+    position: fixed;
+    left: 50px;
+    right: 30px;
+    font-size: 16px;
+    &__blocks {
+        @extend %flex-centering;
+
+        
+
+        &--left {
+            @extend %flex-centering;
+            cursor: pointer;
+        }
+
+        &--center {
+            list-style: $list-none;
+            @extend %flex-centering;
+            width: 600px;
+            padding-left: 200px;
+        }
+
+        &--right {
+            list-style: $list-none;
+            @extend %flex-centering;
+            width: 200px;
+        }
+
+        &--right li,
+        &--center li{
+            cursor: pointer;
+            padding: 5px 10px;
+            transition: .2s ease-in;
+            border-radius: 10px;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.219);
+                
+            }
+        }
+
+        &--right li:hover ,
+        &--center li:hover  {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.219);
+            border-radius: 10px;
+        }
+    }    
+}
+
+.section {
+    height: 100vh;
+}
+
+.section-1 {
+    background: url('../images/Model3.jpg') 0 -100px/ 100% no-repeat;
+}
+
+.section-2 {
+    background: url('../images/ModelY.jpg') 0 -300px/ 100% auto no-repeat;
+}
+
+.section-3 {
+    background: url('../images/ModelS.jpg') 0 -300px/ 100% auto no-repeat;
+}
+
+.section-4 {
+    background: url('../images/ModelX.jpg') 0 -150px/ 100% auto no-repeat;
+}
+
+.section-5 {
+    background: url('../images/House.jpg') 0 0/ 100% auto no-repeat;
+}
+
+.section-6 {
+    background: url('../images/Garage.jpg') 0 0/ 100% 100% no-repeat;
+}
+
+.section-7 {
+    background: url('../images//Accessories.jpg') 0 -270px/100% auto no-repeat;
+}
+
+.scroll-btn {
+    font-size: 40px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transform: rotate(90deg);
+    bottom: 0;
+    a {
+        display: inline;
+        text-decoration: none;
+        list-style: $list-none;
+        cursor: pointer;
+        color: black;
+
+        &:hover {
+            color:rgba(0, 0, 0, 0.63);
+        }
+    }
+}
+
+.section-content {
+    position: fixed;
+    left: 32vw;
+    right: 32vw;
+    top: 16vh;
+    bottom: 16vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--text {
+        text-align: center;
+
+        &__title {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        &__subtitle {
+            
+            font-size: 16px;
+            span {
+                cursor: pointer;
+                border-bottom: 1px solid black;
+                transition: .3s ease-in-out;
+
+                &:hover {
+                    border-bottom: 2px solid black;
+                }
+            }
+        }
+    }
+
+    &--btns {
+        width: 100%;
+        @extend %flex-centering;
+
+        button:nth-child(1) {
+            @extend %btns-style;
+            background-color: rgb(59, 59, 59);
+            color: white;
+        }
+
+        button:nth-child(2) {
+            @extend %btns-style;
+            color: black;
+        }
+    }
+
+    &--single-btn {
+        @extend %flex-centering;
+
+        button {
+            @extend %btns-style;
+            background-color: rgb(24, 24, 24);
+            color: white;
+        }
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 20px;
+    width: 40vw;
+    left: calc(50% - 20vw);
+    font-size: 13px;
+    display: none;
+    &__elements {   
+        padding: 0;
+        list-style: none;
+        @extend %flex-centering;
+    }
+    
+}
